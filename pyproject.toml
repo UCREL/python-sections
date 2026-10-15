@@ -1,0 +1,39 @@
+[build-system]
+requires = ["hatchling", "hatch-vcs"]
+build-backend = "hatchling.build"
+
+[project]
+name = "ucrel_sections"
+dynamic = ["version"]
+description = "Lightweight, colourised console sections, timers and inline unit tests."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "John Vidler" }]
+dependencies = []
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Operating System :: OS Independent",
+    "Environment :: Console",
+    "Topic :: Software Development :: Testing",
+    "Typing :: Typed",
+]
+
+[project.urls]
+Homepage = "https://github.com/UCREL/python-sections"
+Issues = "https://github.com/UCREL/python-sections/issues"
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[tool.hatch.version]
+source = "vcs"
+
+[tool.hatch.build.hooks.vcs]
+version-file = "src/ucrel_sections/_version.py"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/ucrel_sections"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
