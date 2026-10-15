@@ -8,6 +8,8 @@ dynamic = ["version"]
 description = "Lightweight, colourised console sections, timers and inline unit tests."
 readme = "README.md"
 requires-python = ">=3.10"
+license = "MIT"
+license-files = ["LICENSE"]
 authors = [{ name = "John Vidler" }]
 dependencies = []
 classifiers = [
